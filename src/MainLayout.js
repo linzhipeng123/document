@@ -14,7 +14,7 @@ const LangSelect = createWithRemoteLoader({
       onChange={currentLang => {
         setLang(currentLang);
         window.localStorage.setItem('lang', currentLang);
-        nav('/');
+        nav('/document');
       }}
       style={{ width: '100px' }}
       options={[

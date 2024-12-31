@@ -28,7 +28,7 @@ const Home = createWithRemoteLoader({
       }}
       name="product-doc"
       contentClassName="md-content"
-      baseUrl={'/'}
+      baseUrl={'/document'}
       assetsPath={'https://linzhipeng123.github.io/product-doc/assets'}
     />
   );
