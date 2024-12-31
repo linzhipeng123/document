@@ -8,7 +8,7 @@ const { Home, Error, NotFound } = pages;
 const App = ({ globalPreset }) => {
   return (
     <Routes>
-      <Route path="/" element={<MainLayout preset={globalPreset} themeToken={globalPreset.themeToken} paths={[]} />}>
+      <Route path="/document" element={<MainLayout preset={globalPreset} themeToken={globalPreset.themeToken} paths={[]} />}>
         <Route index element={<Home />} />
         <Route path="error" element={<Error />} />
         <Route path="404" element={<NotFound />} />
