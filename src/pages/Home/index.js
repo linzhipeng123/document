@@ -8,7 +8,7 @@ const Home = createWithRemoteLoader({
 
   return (
     <MarkdownPage
-      url="https://linzhipeng123.github.io/product-doc"
+      url="https://leapin-ai.github.io/product-doc"
       params={{ lang: currentLang }}
       transformResponse={response => {
         return {
@@ -22,14 +22,16 @@ const Home = createWithRemoteLoader({
         };
       }}
       transformMenuData={data => {
-        return data.map(item => {
-          return Object.assign({}, item, { path: '/' + item.path.split('/').slice(2).join('/') });
-        });
+        return data
+          .map(item => {
+            return Object.assign({}, item, { path: '/' + item.path.split('/').slice(2).join('/') });
+          })
+          .sort((a, b) => a.index - b.index);
       }}
       name="product-doc"
       contentClassName="md-content"
       baseUrl={'/document'}
-      assetsPath={'https://linzhipeng123.github.io/product-doc/assets'}
+      assetsPath={'https://leapin-ai.github.io/product-doc/assets'}
     />
   );
 });
